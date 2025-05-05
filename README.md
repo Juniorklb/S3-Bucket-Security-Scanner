@@ -71,16 +71,24 @@ Optional arguments:
     def list_buckets():
     s3 = boto3.client('s3')
 
-    try:
-        response = s3.list_buckets()
-        buckets = [bucket['Name'] for bucket in response.get('Buckets', [])]
-        return buckets
-    except ClientError as e:
-        print(f"Error listing buckets: {e}")
+       try:
+           response = s3.list_buckets()
+           buckets = [bucket['Name'] for bucket in response.get('Buckets', [])]
+           return buckets
+      except ClientError as e:
+          print(f"Error listing buckets: {e}")
         return []
 
     if __name__ == "__main__":
-    buckets = list_buckets()
-    print("🪣 Found Buckets:")
-    for bucket in buckets:
-        print(f" - {bucket}")
+         buckets = list_buckets()
+         print("🪣 Found Buckets:")
+         for bucket in buckets:
+              print(f" - {bucket}")
+## 🔧 Before Running:
+- Make sure:
+
+   - Your AWS credentials are configured with aws configure or via IAM role.
+
+   - Boto3 is installed:
+ 
+          pip install boto3
