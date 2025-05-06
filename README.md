@@ -1,4 +1,5 @@
-# 🛡️ S3 Bucket Security Scanner
+# 🛡️ S3 Bucket Security Scanner  ![AWS](https://img.shields.io/badge/Built%20with-AWS-orange?style=flat&logo=amazonaws)![Project Status](https://img.shields.io/badge/status-in--progress-yellow)
+
 
 The **S3 Bucket Security Scanner** is a Python-based tool that audits your AWS S3 buckets for common misconfigurations and security risks. It helps identify public access, missing encryption, unsafe permissions, and other potential vulnerabilities in your cloud storage.
 
