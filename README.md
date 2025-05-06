@@ -1,4 +1,4 @@
-# 🛡️ S3 Bucket Security Scanner  ![AWS](https://img.shields.io/badge/Built%20with-AWS-orange?style=flat&logo=amazonaws)![Project Status](https://img.shields.io/badge/status-in--progress-yellow)
+# 🛡️ S3 Bucket Security Scanner  ![AWS](https://img.shields.io/badge/Built%20with-AWS-orange?style=flat&logo=amazonaws)![Project Status](https://img.shields.io/badge/status-finished-green)
 
 
 The **S3 Bucket Security Scanner** is a Python-based tool that audits your AWS S3 buckets for common misconfigurations and security risks. It helps identify public access, missing encryption, unsafe permissions, and other potential vulnerabilities in your cloud storage.
@@ -304,4 +304,12 @@ Add this function to ``scanner.py``:
      ⚠️ Policy Issues:
      - Wildcard Principal '*' allows s3:GetObject on arn:aws:s3:::demo-open/*
 ### Conclusion: S3 Bucket Security Scanner
-- You've just built a fully functional S3 Bucket Security Scanner that performs key security audits for every S3 bucket in your AWS account. Here's a recap of what your scanner does:
+- You've just built a fully functional S3 Bucket Security Scanner that performs key security audits for every S3 bucket in your AWS account.
+  
+## 📚 Author
+![AWS](https://img.shields.io/badge/Built%20with-AWS-orange?style=flat&logo=amazonaws) by Junior Kalomba
+**🔗 Feel free to contribute or suggest improvements!** 
+<p align="right">
+  <a href="https://www.linkedin.com/in/junior-kalomba-10002a18a/" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="junior-kalomba-10002a18a" height="30" width="40"/>  
+   
