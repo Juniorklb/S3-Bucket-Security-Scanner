@@ -7,13 +7,13 @@ The **S3 Bucket Security Scanner** is a Python-based tool that audits your AWS S
 
 ## 🔧 Features
 
-- 🔍 Detect publicly accessible buckets (read/write)
-- 🔐 Check for server-side encryption (SSE)
-- 📜 Analyze bucket policies and ACLs for overly permissive rules
-- 🔁 Verify if versioning is enabled
-- 📘 Check if access logging is activated
-- 📊 Generate a summary report (CSV, JSON, or console)
-- ⏱️ (Optional) Schedule periodic scans via AWS Lambda and CloudWatch
+- Detect publicly accessible buckets (read/write)
+- Check for server-side encryption (SSE)
+- Analyze bucket policies and ACLs for overly permissive rules
+- Verify if versioning is enabled
+- Check if access logging is activated
+- Generate a summary report (CSV, JSON, or console)
+- (Optional) Schedule periodic scans via AWS Lambda and CloudWatch
 
 ---
 
@@ -124,7 +124,7 @@ And modify the main block to include the check:
 
        if __name__ == "__main__":
        buckets = list_buckets()
-       print("\n🛡️ Scanning Buckets for Public Access...")
+       print("\n🛡 Scanning Buckets for Public Access...")
 
     for bucket in buckets:
         is_public = check_public_access(bucket)
@@ -151,11 +151,11 @@ Add the following function to your ``scanner.py:``
             print(f"[{bucket_name}] Error checking encryption: {e}")
     return False
     
-## 🧩 Update main block to include encryption check:
+## Update main block to include encryption check:
 
     if __name__ == "__main__":
     buckets = list_buckets()
-    print("\n🔐 Scanning Buckets for Public Access & Encryption...")
+    print("\n Scanning Buckets for Public Access & Encryption...")
 
     for bucket in buckets:
         is_public = check_public_access(bucket)
@@ -202,7 +202,7 @@ Add the following function to your ``scanner.py``:
 
         print(f" - {bucket}: {public_status}, {encryption_status}, {versioning_status}")
 
-## 🧪 Sample Output:
+##  Sample Output:
     🔍 Scanning Buckets for Public Access, Encryption & Versioning...
     - secure-bucket: ✅ Private, ✅ Encrypted, ✅ Versioning ON
     - demo-bucket: ❌ Public!, ❌ Not Encrypted, ❌ Versioning OFF
@@ -240,7 +240,7 @@ Add the following function to your ``scanner.py``:
         
 ### Sample Output:
 
-    📋 Scanning Buckets for Security Best Practices...
+     Scanning Buckets for Security Best Practices...
     - project-bucket: ✅ Private, ✅ Encrypted, ✅ Versioning ON, ✅ Logging ON
     - test-bucket: ❌ Public!, ❌ Not Encrypted, ❌ Versioning OFF, ❌ Logging OFF
     
